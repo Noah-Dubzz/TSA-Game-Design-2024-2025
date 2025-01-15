@@ -1,5 +1,7 @@
 using UnityEngine;
 
+using System.Collections.Generic;
+
 public class GridManager : MonoBehaviour
 {
     [Header("Grid Settings")]
@@ -12,12 +14,19 @@ public class GridManager : MonoBehaviour
     public int numberOfPlayers = 2; // Number of players (2 to 4)
     public int regionSize = 3;      // Size of the player region (3x3)
 
+    [Header("Obstacle Settings")]
+    public GameObject obstaclePrefab;    // Prefab for the obstacle
+    [Range(0, 100)] public int obstaclePercentage = 10; // % of tiles to place obstacles
+
     private Color[] playerColors = new Color[] { Color.blue, Color.red, Color.green, Color.yellow };
+    private HashSet<Vector2Int> playerRegions = new HashSet<Vector2Int>(); // Tracks player region tiles
+    private bool isChessboardActive = true; // Track if chessboard is active
 
     void Start()
     {
         GenerateGrid();
         AssignPlayerRegions();
+        PlaceObstacles();
     }
 
     void GenerateGrid()
@@ -43,7 +52,30 @@ public class GridManager : MonoBehaviour
                 GameObject tile = Instantiate(tilePrefab, tilePosition, Quaternion.identity);
                 tile.transform.parent = transform;
                 tile.name = $"Tile_{x}_{z}";
+
+                // Apply chessboard pattern if enabled
+                if (isChessboardActive)
+                {
+                    ApplyChessboardPattern(tile, x, z);
+                }
+                else
+                {
+                    tile.GetComponent<Renderer>().material.color = Color.white; // Default white color
+                }
             }
+        }
+    }
+
+    void ApplyChessboardPattern(GameObject tile, int x, int z)
+    {
+        // Create a chessboard pattern: alternating black and white tiles
+        if ((x + z) % 2 == 0)
+        {
+            tile.GetComponent<Renderer>().material.color = Color.black;
+        }
+        else
+        {
+            tile.GetComponent<Renderer>().material.color = Color.white;
         }
     }
 
@@ -69,6 +101,9 @@ public class GridManager : MonoBehaviour
 
             // Highlight the player's region with their color
             HighlightRegion(start.x, start.y, playerColors[i]);
+
+            // Add these tiles to the player region tracker
+            MarkRegionTiles(start.x, start.y);
         }
     }
 
@@ -121,5 +156,87 @@ public class GridManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    void MarkRegionTiles(int startX, int startZ)
+    {
+        int halfRegion = regionSize / 2;
+
+        for (int x = -halfRegion; x <= halfRegion; x++)
+        {
+            for (int z = -halfRegion; z <= halfRegion; z++)
+            {
+                int tileX = startX + x;
+                int tileZ = startZ + z;
+
+                // Check bounds
+                if (tileX >= 0 && tileX < gridWidth && tileZ >= 0 && tileZ < gridLength)
+                {
+                    playerRegions.Add(new Vector2Int(tileX, tileZ));
+                }
+            }
+        }
+    }
+
+    void PlaceObstacles()
+    {
+        if (obstaclePrefab == null)
+        {
+            Debug.LogError("Obstacle Prefab is not assigned!");
+            return;
+        }
+
+        int totalTiles = gridWidth * gridLength;
+        int obstacleCount = totalTiles * obstaclePercentage / 100;
+
+        List<Vector2Int> availableTiles = new List<Vector2Int>();
+
+        // Add all non-player-region tiles to the list
+        for (int x = 0; x < gridWidth; x++)
+        {
+            for (int z = 0; z < gridLength; z++)
+            {
+                Vector2Int tilePosition = new Vector2Int(x, z);
+                if (!playerRegions.Contains(tilePosition))
+                {
+                    availableTiles.Add(tilePosition);
+                }
+            }
+        }
+
+        // Shuffle the available tiles randomly
+        for (int i = 0; i < availableTiles.Count; i++)
+        {
+            int randomIndex = Random.Range(0, availableTiles.Count);
+            Vector2Int temp = availableTiles[i];
+            availableTiles[i] = availableTiles[randomIndex];
+            availableTiles[randomIndex] = temp;
+        }
+
+        // Place obstacles on the chosen tiles
+        for (int i = 0; i < obstacleCount && i < availableTiles.Count; i++)
+        {
+            Vector2Int position = availableTiles[i];
+            Transform tile = transform.Find($"Tile_{position.x}_{position.y}");
+            if (tile != null)
+            {
+                Vector3 spawnPosition = tile.position + Vector3.up * 0.5f; // Slightly above the tile
+                Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, transform);
+            }
+        }
+    }
+
+    // Toggle Chessboard
+    public void ToggleChessboard()
+    {
+        isChessboardActive = !isChessboardActive;
+        // Destroy all tiles and regenerate to apply the new pattern
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+        GenerateGrid();
+        AssignPlayerRegions();
+        PlaceObstacles();
     }
 }
