@@ -1,0 +1,9 @@
+is_dragging = false;   // Tracks if the object is currently being dragged
+original_x = x;        // Saves the original X position (used when dragging stops)
+original_y = y;        // Saves the original Y position
+image_blend = c_green;
+global.Character1 = objTheBlur;
+global.Character1Name = "The Blue";
+global.Character1Description = "A cocky social media famous speedster"
+global.Character1Units = 2;
+global.Character1Active = false;
