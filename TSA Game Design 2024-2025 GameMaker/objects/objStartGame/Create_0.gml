@@ -1,0 +1,1 @@
+global.CurrentTurn = 1;
