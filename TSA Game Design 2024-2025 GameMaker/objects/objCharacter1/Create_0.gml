@@ -1,9 +1,0 @@
-is_dragging = false;   // Tracks if the object is currently being dragged
-original_x = x;        // Saves the original X position (used when dragging stops)
-original_y = y;        // Saves the original Y position
-image_blend = c_red; // Assign the character's color (e.g., red for Player 1)
-global.Character1 = objTheWanderer;
-global.Character1Name = "The Wanderer";
-global.Character1Description = "A tormented soul burdened by the weight of a tragic past"
-global.Character1Units = 2;
-global.Character1Active = false;

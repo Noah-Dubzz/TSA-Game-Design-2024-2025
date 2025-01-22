@@ -1,9 +1,0 @@
-is_dragging = false;   // Tracks if the object is currently being dragged
-original_x = x;        // Saves the original X position (used when dragging stops)
-original_y = y;        // Saves the original Y position
-image_blend = c_blue;
-global.Character1 = objTheApex;
-global.Character1Name = "The Apex";
-global.Character1Description = "The pinnacle of modern technology"
-global.Character1Units = 2;
-global.Character1Active = false;

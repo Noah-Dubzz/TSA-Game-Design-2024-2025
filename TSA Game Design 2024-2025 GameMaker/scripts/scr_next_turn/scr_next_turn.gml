@@ -4,7 +4,7 @@ function scr_next_turn(){
 global.CurrentTurn += 1; // Move to the next player's turn
 
 // If the turn exceeds the total number of players, reset it to 1
-if (global.CurrentTurn > global.player_count) {
+if (global.CurrentTurn > global.amountofplayers) {
     global.CurrentTurn = 1;
 }
 
