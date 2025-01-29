@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprButtonPlaceholder",
-    "path":"sprites/sprButtonPlaceholder/sprButtonPlaceholder.yy",
+    "name":"SPR_3_Player",
+    "path":"sprites/SPR_3_Player/SPR_3_Player.yy",
   },
   "spriteMaskId":null,
   "visible":true,
