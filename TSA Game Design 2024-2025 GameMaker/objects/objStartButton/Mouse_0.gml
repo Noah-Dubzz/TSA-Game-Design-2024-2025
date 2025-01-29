@@ -1,2 +1,2 @@
 // Transition to the character select room
-room_goto(rmCharacterSelect);
+room_goto(rmHowMany);
