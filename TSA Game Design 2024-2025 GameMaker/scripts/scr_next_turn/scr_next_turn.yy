@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scr_next_turn",
   "isCompatibility":false,
   "isDnD":false,
