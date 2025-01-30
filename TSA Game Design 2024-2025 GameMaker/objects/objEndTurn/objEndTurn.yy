@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprButtonPlaceholder",
-    "path":"sprites/sprButtonPlaceholder/sprButtonPlaceholder.yy",
+    "name":"SPR_End_Turn",
+    "path":"sprites/SPR_End_Turn/SPR_End_Turn.yy",
   },
   "spriteMaskId":null,
   "visible":true,
