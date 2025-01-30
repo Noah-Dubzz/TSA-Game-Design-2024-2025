@@ -6,7 +6,7 @@
   "name":"scr_next_turn",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Sequences/Scripts.yy",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
