@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 // Global Variables for Turn System
-global.amountofplayers = 4; // Change based on your player count
 global.currentturn = 1; // Player 1 starts
 global.turnstate = "turn_start"; // Initial turn state
 global.gameover = false; // Game over flag (optional)
