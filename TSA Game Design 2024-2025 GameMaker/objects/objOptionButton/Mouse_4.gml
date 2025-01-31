@@ -5,6 +5,6 @@ var l6BBFBCAC_0;l6BBFBCAC_0 = mouse_check_button_pressed(mb_left);if (l6BBFBCA
 	/// @DnDVersion : 1
 	/// @DnDHash : 07D35DC4
 	/// @DnDParent : 6BBFBCAC
-	/// @DnDArgument : "room" "rmOption_Screen"
-	/// @DnDSaveInfo : "room" "rmOption_Screen"
-	room_goto(rmOption_Screen);}
+	/// @DnDArgument : "room" "rmOptionsRoom"
+	/// @DnDSaveInfo : "room" "rmOptionsRoom"
+	room_goto(rmOptionsRoom);}

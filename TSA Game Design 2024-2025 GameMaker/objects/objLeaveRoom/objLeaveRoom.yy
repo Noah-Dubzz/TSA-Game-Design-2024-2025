@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"objBack",
+  "%Name":"objLeaveRoom",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objBack",
+  "name":"objLeaveRoom",
   "overriddenProperties":[],
   "parent":{
-    "name":"CharacterSelectScreen",
-    "path":"folders/Objects/CharacterSelectScreen.yy",
+    "name":"OptionScreen",
+    "path":"folders/Objects/OptionScreen.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -33,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBack",
-    "path":"sprites/sprBack/sprBack.yy",
+    "name":"sprLeaveButton",
+    "path":"sprites/sprLeaveButton/sprLeaveButton.yy",
   },
   "spriteMaskId":null,
   "visible":true,
