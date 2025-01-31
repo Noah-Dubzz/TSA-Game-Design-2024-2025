@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprButton",
-    "path":"sprites/sprButton/sprButton.yy",
+    "name":"spr_StartButton",
+    "path":"sprites/spr_StartButton/spr_StartButton.yy",
   },
   "spriteMaskId":null,
   "visible":true,
