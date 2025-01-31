@@ -18,6 +18,10 @@
     {"$GMFolder":"","%Name":"CharacterSelectScreen","folderPath":"folders/Objects/CharacterSelectScreen.yy","name":"CharacterSelectScreen","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"In-Game","folderPath":"folders/Objects/In-Game.yy","name":"In-Game","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Characters","folderPath":"folders/Objects/In-Game/Characters.yy","name":"Characters","resourceType":"GMFolder","resourceVersion":"2.0",},
+<<<<<<< HEAD
+=======
+    {"$GMFolder":"","%Name":"Units","folderPath":"folders/Objects/In-Game/Units.yy","name":"Units","resourceType":"GMFolder","resourceVersion":"2.0",},
+>>>>>>> parent of 54688d2 (Verified Joseph's Changes)
     {"$GMFolder":"","%Name":"Players","folderPath":"folders/Objects/In-Game/Players.yy","name":"Players","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"TitleScreen","folderPath":"folders/Objects/TitleScreen.yy","name":"TitleScreen","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -34,9 +38,14 @@
     {"$GMFolder":"","%Name":"The Apex","folderPath":"folders/Sprites/Characters/The Apex.yy","name":"The Apex","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"The Blur","folderPath":"folders/Sprites/Characters/The Blur.yy","name":"The Blur","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"ChracterSelect","folderPath":"folders/Sprites/ChracterSelect.yy","name":"ChracterSelect","resourceType":"GMFolder","resourceVersion":"2.0",},
+<<<<<<< HEAD
     {"$GMFolder":"","%Name":"Misc.","folderPath":"folders/Sprites/Misc..yy","name":"Misc.","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"PlaceHolders","folderPath":"folders/Sprites/PlaceHolders.yy","name":"PlaceHolders","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player buttons","folderPath":"folders/Sprites/Player buttons.yy","name":"Player buttons","resourceType":"GMFolder","resourceVersion":"2.0",},
+=======
+    {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sprites/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Units","folderPath":"folders/Sprites/Units.yy","name":"Units","resourceType":"GMFolder","resourceVersion":"2.0",},
+>>>>>>> parent of 54688d2 (Verified Joseph's Changes)
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
