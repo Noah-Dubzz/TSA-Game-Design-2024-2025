@@ -1,4 +1,5 @@
-// Speed variable to control how fast the object moves
+if (global.amountofplayers == 4){
+if (global.currentturn == 4){	// Speed variable to control how fast the object moves
 var move_speed = 4;
 
 // Diagonal movement logic
@@ -27,31 +28,38 @@ y += move_y;
 
 // Set the correct sprite based on the direction of movement
 if (move_x < 0 && move_y == 0) {
-    sprite_index = sprBlurLeft;  // Moving left
+    sprite_index = sprite_indexLeft;  // Moving left
 } 
 else if (move_x > 0 && move_y == 0) {
-    sprite_index = sprBlurRight; // Moving right
+    sprite_index = sprite_indexRight; // Moving right
 }
 else if (move_y < 0 && move_x == 0) {
-    sprite_index = sprBlurUp;    // Moving up
+    sprite_index = sprite_indexUp;    // Moving up
 }
 else if (move_y > 0 && move_x == 0) {
-    sprite_index = sprBlurDown;  // Moving down
+    sprite_index = sprite_indexDown;  // Moving down
 }
 else if (move_x < 0 && move_y < 0) {
-    sprite_index = sprBlurUpLeft;   // Moving up-left diagonally
+    sprite_index = sprite_indexUpLeft;   // Moving up-left diagonally
 }
 else if (move_x > 0 && move_y < 0) {
-    sprite_index = sprBlurUpRight;  // Moving up-right diagonally
+    sprite_index = sprite_indexUpRight;  // Moving up-right diagonally
 }
 else if (move_x < 0 && move_y > 0) {
-    sprite_index = sprBlurDownLeft; // Moving down-left diagonally
+    sprite_index = sprite_indexDownLeft; // Moving down-left diagonally
 }
 else if (move_x > 0 && move_y > 0) {
-    sprite_index = sprBlurDownRight; // Moving down-right diagonally
+    sprite_index = sprite_indexDownRight; // Moving down-right diagonally
 }
 
 // Optional: Add idle state if no keys are pressed
 if (move_x == 0 && move_y == 0) {
-    sprite_index = sprBlurIdle;  // Set idle sprite if no movement
+    sprite_index = sprite_indexIdle;  // Set idle sprite if no movement
+}
+} 
+}
+if (global.amountofplayers == 4){	
+if (global.currentturn != 4){
+	sprite_index = sprite_indexIdle;
+}
 }

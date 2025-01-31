@@ -1,4 +1,4 @@
-// Speed variable to control how fast the object moves
+if (global.currentturn == 1){	// Speed variable to control how fast the object moves
 var move_speed = 4;
 
 // Diagonal movement logic
@@ -21,37 +21,41 @@ if (keyboard_check(vk_down) || keyboard_check(ord("S"))) {
     move_y = move_speed;   // Move down
 }
 
-// Apply movement to objTheApex
+// Apply movement to objTheBlur
 x += move_x;
 y += move_y;
 
 // Set the correct sprite based on the direction of movement
 if (move_x < 0 && move_y == 0) {
-    sprite_index = sprApexLeft;  // Moving left
+    sprite_index = sprite_indexLeft;  // Moving left
 } 
 else if (move_x > 0 && move_y == 0) {
-    sprite_index = sprApexRight; // Moving right
+    sprite_index = sprite_indexRight; // Moving right
 }
 else if (move_y < 0 && move_x == 0) {
-    sprite_index = sprApexUp;    // Moving up
+    sprite_index = sprite_indexUp;    // Moving up
 }
 else if (move_y > 0 && move_x == 0) {
-    sprite_index = sprApexDown;  // Moving down
+    sprite_index = sprite_indexDown;  // Moving down
 }
 else if (move_x < 0 && move_y < 0) {
-    sprite_index = sprApexUpLeft;   // Moving up-left diagonally
+    sprite_index = sprite_indexUpLeft;   // Moving up-left diagonally
 }
 else if (move_x > 0 && move_y < 0) {
-    sprite_index = sprApexUpRight;  // Moving up-right diagonally
+    sprite_index = sprite_indexUpRight;  // Moving up-right diagonally
 }
 else if (move_x < 0 && move_y > 0) {
-    sprite_index = sprApexDownLeft; // Moving down-left diagonally
+    sprite_index = sprite_indexDownLeft; // Moving down-left diagonally
 }
 else if (move_x > 0 && move_y > 0) {
-    sprite_index = sprApexDownRight; // Moving down-right diagonally
+    sprite_index = sprite_indexDownRight; // Moving down-right diagonally
 }
+
 
 // Optional: Add idle state if no keys are pressed
 if (move_x == 0 && move_y == 0) {
-    sprite_index = sprApexIdle;  // Set idle sprite if no movement
+    sprite_index = sprite_indexIdle;  // Set idle sprite if no movement
+}
+} else {
+	sprite_index = sprite_indexIdle;
 }

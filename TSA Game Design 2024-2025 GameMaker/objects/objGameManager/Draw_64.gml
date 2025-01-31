@@ -1,7 +1,7 @@
 // objEndTurn: Draw Event
-
+instance_create_layer(980, 540, "UI", objEndTurn);
 // Ensure only the current turn sprite is drawn
-switch (global.CurrentTurn) {
+switch (global.currentturn) {
     case 1:
         draw_sprite(sprTurn1, 0, 0, 0); // Draw Turn 1 sprite
         break;

@@ -1,20 +1,46 @@
 if (global.amountofplayers >= 3){
 if (global.p3character = 1){
-	instance_create_layer(0, 0, "Characters", objTheBlur);
+	sprite_indexLeft = sprBlurLeft
+	sprite_indexRight = sprBlurRight
+	sprite_indexUp = sprBlurUp
+	sprite_indexDown = sprBlurDown
+	sprite_indexUpLeft = sprBlurUpLeft
+	sprite_indexUpRight = sprBlurUpRight
+	sprite_indexDownLeft = sprBlurDownLeft
+	sprite_indexDownRight = sprBlurDownRight
+	sprite_indexIdle = sprBlurIdle
 }
-}
-if (global.amountofplayers >= 3){
 if (global.p3character = 2){
-	instance_create_layer(0, 0, "Characters", objBlamesBlonde);
+	sprite_indexLeft = sprBlurLeft
+	sprite_indexRight = sprBlurRight
+	sprite_indexUp = sprBlurUp
+	sprite_indexDown = sprBlurDown
+	sprite_indexUpLeft = sprBlurUpLeft
+	sprite_indexUpRight = sprBlurUpRight
+	sprite_indexDownLeft = sprBlurDownLeft
+	sprite_indexDownRight = sprBlurDownRight
+	sprite_indexIdle = sprBlurIdle
 }
-}
-if (global.amountofplayers >= 3){
 if (global.p3character = 3){
-	instance_create_layer(0, 0, "Characters", objTheApex);
+	sprite_indexLeft = sprApexLeft
+	sprite_indexRight = sprApexRight
+	sprite_indexUp = sprApexUp
+	sprite_indexDown = sprApexDown
+	sprite_indexUpLeft = sprApexUpLeft
+	sprite_indexUpRight = sprApexUpRight
+	sprite_indexDownLeft = sprApexDownLeft
+	sprite_indexDownRight = sprApexDownRight
+	sprite_indexIdle = sprApexIdle
 }
-}
-if (global.amountofplayers >= 3){
 if (global.p3character = 4){
-	instance_create_layer(0, 0, "Characters", objTheWanderer);
+	sprite_indexLeft = sprBlurLeft
+	sprite_indexRight = sprBlurRight
+	sprite_indexUp = sprBlurUp
+	sprite_indexDown = sprBlurDown
+	sprite_indexUpLeft = sprBlurUpLeft
+	sprite_indexUpRight = sprBlurUpRight
+	sprite_indexDownLeft = sprBlurDownLeft
+	sprite_indexDownRight = sprBlurDownRight
+	sprite_indexIdle = sprBlurIdle
 }
 }

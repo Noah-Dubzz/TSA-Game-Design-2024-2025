@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"SPR_new_button",
-    "path":"sprites/SPR_new_button/SPR_new_button.yy",
+    "name":"sprButton",
+    "path":"sprites/sprButton/sprButton.yy",
   },
   "spriteMaskId":null,
   "visible":true,

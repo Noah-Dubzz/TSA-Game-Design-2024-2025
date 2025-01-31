@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"SPR_Back",
-    "path":"sprites/SPR_Back/SPR_Back.yy",
+    "name":"sprBack",
+    "path":"sprites/sprBack/sprBack.yy",
   },
   "spriteMaskId":null,
   "visible":true,

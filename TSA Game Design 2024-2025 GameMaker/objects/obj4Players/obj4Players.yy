@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"SPR_4_Players",
-    "path":"sprites/SPR_4_Players/SPR_4_Players.yy",
+    "name":"spr4P",
+    "path":"sprites/spr4P/spr4P.yy",
   },
   "spriteMaskId":null,
   "visible":true,
