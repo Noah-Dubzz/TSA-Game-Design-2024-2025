@@ -56,7 +56,10 @@ else if (move_x > 0 && move_y > 0) {
 if (move_x == 0 && move_y == 0) {
     sprite_index = sprite_indexIdle;  // Set idle sprite if no movement
 }
-} else {
+} 
+}
+if (global.amountofplayers == 4){	
+if (global.currentturn != 4){
 	sprite_index = sprite_indexIdle;
 }
 }

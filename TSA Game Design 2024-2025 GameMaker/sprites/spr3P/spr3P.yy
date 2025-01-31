@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Player buttons",
-    "path":"folders/Sprites/Player buttons.yy",
+    "name":"TSA Game Design 2024-2025",
+    "path":"TSA Game Design 2024-2025.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

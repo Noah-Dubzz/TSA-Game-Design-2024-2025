@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"All_Titles",
-    "path":"folders/Sprites/All_Titles.yy",
+    "name":"TSA Game Design 2024-2025",
+    "path":"TSA Game Design 2024-2025.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

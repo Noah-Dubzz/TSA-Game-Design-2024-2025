@@ -44,7 +44,3 @@ if (global.p3character = 4){
 	sprite_indexIdle = sprBlurIdle
 }
 }
-
-if (global.amountofplayers < 3) {
-	instance_destroy(self);
-}
