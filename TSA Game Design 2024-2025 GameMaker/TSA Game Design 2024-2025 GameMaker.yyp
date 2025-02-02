@@ -69,7 +69,6 @@
     {"id":{"name":"objUnitManager","path":"objects/objUnitManager/objUnitManager.yy",},},
     {"id":{"name":"rmGame","path":"rooms/rmGame/rmGame.yy",},},
     {"id":{"name":"rmHowMany","path":"rooms/rmHowMany/rmHowMany.yy",},},
-    {"id":{"name":"rmOption_Screen","path":"rooms/rmOption_Screen/rmOption_Screen.yy",},},
     {"id":{"name":"rmPlayer1Select","path":"rooms/rmPlayer1Select/rmPlayer1Select.yy",},},
     {"id":{"name":"rmPlayer2Select","path":"rooms/rmPlayer2Select/rmPlayer2Select.yy",},},
     {"id":{"name":"rmPlayer3Select","path":"rooms/rmPlayer3Select/rmPlayer3Select.yy",},},
@@ -124,7 +123,6 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rmTitleScreen","path":"rooms/rmTitleScreen/rmTitleScreen.yy",},},
-    {"roomId":{"name":"rmOption_Screen","path":"rooms/rmOption_Screen/rmOption_Screen.yy",},},
     {"roomId":{"name":"rmHowMany","path":"rooms/rmHowMany/rmHowMany.yy",},},
     {"roomId":{"name":"rmPlayer1Select","path":"rooms/rmPlayer1Select/rmPlayer1Select.yy",},},
     {"roomId":{"name":"rmPlayer2Select","path":"rooms/rmPlayer2Select/rmPlayer2Select.yy",},},

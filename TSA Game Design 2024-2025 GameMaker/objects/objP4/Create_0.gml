@@ -44,3 +44,6 @@ if (global.p4character = 4){
 	sprite_indexIdle = sprBlurIdle
 }
 }
+if (global.amountofplayers != 4){
+	instance_destroy(self);
+}
