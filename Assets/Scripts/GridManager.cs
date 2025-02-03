@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 public class GridManager : MonoBehaviour
@@ -10,14 +10,13 @@ public class GridManager : MonoBehaviour
     public float tileSize = 1.0f;
 
     [Header("Player Settings")]
-    public int regionSize = 3; // The size of the player�s region
+    public int regionSize = 3; // The size of the player’s region
 
     [Header("Obstacle Settings")]
     public GameObject obstaclePrefab;
     [Range(0, 100)] public int obstaclePercentage = 10;
 
-    private Color[] playerColors = new Color[] { Color.blue, Color.red, Color.green, Color.yellow };
-    private HashSet<Vector2Int> playerRegions = new HashSet<Vector2Int>(); // Stores all player region tiles
+    private HashSet<Vector2Int> playerRegions = new HashSet<Vector2Int>();
     private bool isChessboardActive = true;
 
     void Start()
@@ -89,6 +88,7 @@ public class GridManager : MonoBehaviour
         int centerZ = gridLength / 2;
 
         Vector2Int[] playerStarts = GetPlayerStartPositions(centerX, centerZ);
+        Color[] playerColors = GetPlayerColors(numberOfPlayers);
 
         for (int i = 0; i < numberOfPlayers; i++)
         {
@@ -97,6 +97,24 @@ public class GridManager : MonoBehaviour
 
             HighlightRegion(start.x, start.y, playerColors[i]);
             MarkRegionTiles(start.x, start.y);
+        }
+    }
+    void MarkRegionTiles(int startX, int startZ)
+    {
+        int halfRegion = regionSize / 2;
+
+        for (int x = -halfRegion; x <= halfRegion; x++)
+        {
+            for (int z = -halfRegion; z <= halfRegion; z++)
+            {
+                int tileX = startX + x;
+                int tileZ = startZ + z;
+
+                if (tileX >= 0 && tileX < gridWidth && tileZ >= 0 && tileZ < gridLength)
+                {
+                    playerRegions.Add(new Vector2Int(tileX, tileZ));
+                }
+            }
         }
     }
 
@@ -113,17 +131,29 @@ public class GridManager : MonoBehaviour
         {
             positions[0] = new Vector2Int(centerX, 0);
             positions[1] = new Vector2Int(gridWidth - 1, centerZ);
-            positions[2] = new Vector2Int(0, centerZ);
+            positions[2] = new Vector2Int(0, centerZ); // Left-center
         }
         else if (GameManager.Instance.TotalPlayers == 4)
         {
             positions[0] = new Vector2Int(centerX, 0);
-            positions[1] = new Vector2Int(centerX, gridLength - 1);
-            positions[2] = new Vector2Int(gridWidth - 1, centerZ);
+            positions[1] = new Vector2Int(gridWidth - 1, centerZ);
+            positions[2] = new Vector2Int(centerX, gridLength - 1);
             positions[3] = new Vector2Int(0, centerZ);
         }
 
         return positions;
+    }
+
+    Color[] GetPlayerColors(int numberOfPlayers)
+    {
+        if (numberOfPlayers == 3)
+        {
+            return new Color[] { Color.blue, Color.red, Color.green }; // Green replaces Yellow for 3 players
+        }
+        else
+        {
+            return new Color[] { Color.blue, Color.red, Color.yellow, Color.green }; // Normal order for 4 players
+        }
     }
 
     void HighlightRegion(int startX, int startZ, Color regionColor)
@@ -144,25 +174,6 @@ public class GridManager : MonoBehaviour
                     {
                         tile.GetComponent<Renderer>().material.color = regionColor;
                     }
-                    playerRegions.Add(new Vector2Int(tileX, tileZ)); // Store as a player region tile
-                }
-            }
-        }
-    }
-
-    void MarkRegionTiles(int startX, int startZ)
-    {
-        int halfRegion = regionSize / 2;
-
-        for (int x = -halfRegion; x <= halfRegion; x++)
-        {
-            for (int z = -halfRegion; z <= halfRegion; z++)
-            {
-                int tileX = startX + x;
-                int tileZ = startZ + z;
-
-                if (tileX >= 0 && tileX < gridWidth && tileZ >= 0 && tileZ < gridLength)
-                {
                     playerRegions.Add(new Vector2Int(tileX, tileZ));
                 }
             }
@@ -187,7 +198,7 @@ public class GridManager : MonoBehaviour
             for (int z = 0; z < gridLength; z++)
             {
                 Vector2Int tilePosition = new Vector2Int(x, z);
-                if (!playerRegions.Contains(tilePosition)) // Avoid spawning in player regions
+                if (!playerRegions.Contains(tilePosition))
                 {
                     availableTiles.Add(tilePosition);
                 }
