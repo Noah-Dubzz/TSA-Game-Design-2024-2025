@@ -1,4 +1,13 @@
 if (global.currentturn == 2){	// Speed variable to control how fast the object moves
+	
+if (keyboard_check(ord("E"))){
+    if (resources >= global.unit_cost) {
+        var new_unit = instance_create_layer(mouse_x, mouse_y, "Units", objUnit);
+        new_unit.owner = 2; // Assign ownership to Player 1
+        resources -= global.unit_cost;
+    }
+}
+
 var move_speed = 4;
 
 // Diagonal movement logic

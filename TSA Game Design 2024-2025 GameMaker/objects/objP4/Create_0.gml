@@ -1,3 +1,5 @@
+resources = 10;
+
 if (global.amountofplayers = 4){
 if (global.p4character = 1){
 	sprite_indexLeft = sprBlurLeft

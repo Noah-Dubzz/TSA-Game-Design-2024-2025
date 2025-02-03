@@ -1,3 +1,5 @@
+resources = 10;
+
 if (global.p1character = 1){
 	sprite_indexLeft = sprBlurLeft
 	sprite_indexRight = sprBlurRight

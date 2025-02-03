@@ -1,0 +1,1 @@
+global.unit_cost = 1;
