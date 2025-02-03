@@ -1,59 +1,72 @@
 using UnityEngine;
-using UnityEngine.UI; // For UI elements like Text and Button
+using UnityEngine.UI;
 using System.Collections;
 
 public class TurnManager : MonoBehaviour
 {
-    [Header("Player Settings")]
-    public int totalPlayers = 4;   // Total number of players (2-4)
-    public int startingMinions = 20; // Starting minions for each player
+    public Text playerMinionsText;
+    public Text turnText; // UI text to display "Player X's Turn!"
+    public Button endTurnButton;
 
-    private int currentPlayer = 0; // Start with Player 1 (0-indexed)
-    private int[] playerMinions;   // Array to store the number of minions for each player
-
-    [Header("UI Settings")]
-    public Text playerMinionsText; // Text to display the current player's minions
-    public Button endTurnButton;  // Button to end the turn
+    [Header("Turn Message Settings")]
+    public float turnMessageDuration = 1.5f; // How long the text stays visible
+    public float fadeDuration = 1f; // How long the fade-out takes
 
     void Start()
     {
-        playerMinions = new int[totalPlayers];
-
-        // Initialize all players with starting minions
-        for (int i = 0; i < totalPlayers; i++)
-        {
-            playerMinions[i] = startingMinions;
-        }
-
-        // Setup UI
         UpdateMinionsUI();
-
-        // Set up the End Turn button listener
+        StartCoroutine(ShowTurnMessage());
         endTurnButton.onClick.AddListener(EndTurn);
     }
 
     void EndTurn()
     {
-        // Move to the next player
-        currentPlayer = (currentPlayer + 1) % totalPlayers;
-
-        // Update the UI for the new current player
+        GameManager.Instance.NextTurn();
         UpdateMinionsUI();
+        StartCoroutine(ShowTurnMessage()); // Show the new turn message
     }
 
     void UpdateMinionsUI()
     {
-        // Display the current player's number of minions
-        playerMinionsText.text = $"Player {currentPlayer + 1}'s Minions: {playerMinions[currentPlayer]}";
+        int currentPlayer = GameManager.Instance.CurrentPlayer;
+        playerMinionsText.text = $"Player {currentPlayer + 1}'s Minions: {GameManager.Instance.PlayerMinions[currentPlayer]}";
 
-        // Optionally, change the color to show whose turn it is
-        // For example, highlight the current player's color
-        switch (currentPlayer)
+        // Set player color based on the turn
+        Color playerColor = GetPlayerColor(currentPlayer);
+        playerMinionsText.color = playerColor;
+    }
+
+    IEnumerator ShowTurnMessage()
+    {
+        int currentPlayer = GameManager.Instance.CurrentPlayer;
+        Color playerColor = GetPlayerColor(currentPlayer); // Get the current player's color
+
+        turnText.text = $"Player {currentPlayer + 1}'s Turn!";
+        turnText.gameObject.SetActive(true);
+        turnText.color = new Color(playerColor.r, playerColor.g, playerColor.b, 1f); // Set full opacity
+
+        yield return new WaitForSeconds(turnMessageDuration); // Keep text visible for the specified duration
+
+        // Smooth fade-out over fadeDuration
+        float fadeStep = 1f / fadeDuration;
+        for (float t = 1f; t >= 0; t -= Time.deltaTime * fadeStep)
         {
-            case 0: playerMinionsText.color = Color.blue; break;
-            case 1: playerMinionsText.color = Color.red; break;
-            case 2: playerMinionsText.color = Color.green; break;
-            case 3: playerMinionsText.color = Color.yellow; break;
+            turnText.color = new Color(playerColor.r, playerColor.g, playerColor.b, t);
+            yield return null;
+        }
+
+        turnText.gameObject.SetActive(false);
+    }
+
+    Color GetPlayerColor(int playerIndex)
+    {
+        switch (playerIndex)
+        {
+            case 0: return Color.blue;
+            case 1: return Color.red;
+            case 2: return Color.green;
+            case 3: return Color.yellow;
+            default: return Color.white;
         }
     }
 }
