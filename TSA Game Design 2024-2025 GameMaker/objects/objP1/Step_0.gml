@@ -1,4 +1,4 @@
-// Player 1's turn logic
+// Player 2's turn logic
 if (global.currentturn == 1) {
 
     // Check if the "E" key is pressed and ensure no action is currently being performed

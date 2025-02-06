@@ -113,6 +113,7 @@
     {"id":{"name":"sprOptionButton","path":"sprites/sprOptionButton/sprOptionButton.yy",},},
     {"id":{"name":"sprOptionsTitle","path":"sprites/sprOptionsTitle/sprOptionsTitle.yy",},},
     {"id":{"name":"sprPlayerNamePlaceholder","path":"sprites/sprPlayerNamePlaceholder/sprPlayerNamePlaceholder.yy",},},
+    {"id":{"name":"sprTesting","path":"sprites/sprTesting/sprTesting.yy",},},
     {"id":{"name":"sprTestUnit","path":"sprites/sprTestUnit/sprTestUnit.yy",},},
     {"id":{"name":"sprTheApexPortrait","path":"sprites/sprTheApexPortrait/sprTheApexPortrait.yy",},},
     {"id":{"name":"sprTheBlurPortrait","path":"sprites/sprTheBlurPortrait/sprTheBlurPortrait.yy",},},
