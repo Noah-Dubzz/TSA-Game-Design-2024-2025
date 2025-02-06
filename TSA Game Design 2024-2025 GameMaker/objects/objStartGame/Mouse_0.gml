@@ -1,2 +1,2 @@
-// Transition to the character select room
+// Transition to the game room
 room_goto(rmGame);

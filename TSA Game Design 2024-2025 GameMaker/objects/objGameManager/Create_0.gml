@@ -1,14 +1,17 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Initialization of the turn-based game system
+
 // Global Variables for Turn System
-global.currentturn = 1; // Player 1 starts
-global.turnstate = "turn_start"; // Initial turn state
-global.gameover = false; // Game over flag (optional)
+global.currentturn = 1;  // Player 1 starts the game
+global.turnstate = "turn_start";  // Initial state when the turn starts
+global.gameover = false;  // Flag to check if the game is over (optional)
 
-// Initialization of Turn Manager
+// Turn Manager Initialization
+// These global variables control the flow of the game turns
+global.turnstate = "turn_start";  // The game starts in the 'turn_start' state
+global.currentturn = 1;  // Player 1 starts their turn
+global.gameover = false;  // The game is not over initially
 
-global.turnstate = "turn_start"; // Game starts in 'turn_start' state
-global.currentturn = 1; // Start with player 1
-global.gameover = false; // Game is not over initially
-
-// Optional: Setup other necessary global game state variables
+// Optional: Setup additional global variables as needed for game state
+// Example:
+// global.resources = 100;  // A resource variable for each player
+// global.max_turns = 10;  // Maximum number of turns before game over

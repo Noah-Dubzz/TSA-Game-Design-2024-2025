@@ -10,27 +10,42 @@ if (global.gameover) {
 // Handle turn state machine
 switch (global.turnstate) {
     case "turn_start":
-        
         // Transition to 'turn_active' state
         global.turnstate = "turn_active";
         break;
 
     case "turn_active":
         // This is where the player can take their actions (move, play, etc.)
-        // For example, enable movement or actions for the current player
+        // Example: enable movement or actions for the current player
         
-        // Once the player is done, transition to 'turn_end'
-        // Let's simulate that the player is ready to end their turn.
-        // You can trigger this with any event, like a button press or a mouse click.
-        if (global.endturn = true) {
+        // Set the current player object based on the turn number
+        switch(global.currentturn) {
+            case 1:
+                global.currentplayer = objP1;
+                break;
+            case 2:
+                global.currentplayer = objP2;
+                break;
+            case 3:
+                global.currentplayer = objP3;
+                break;
+            case 4:
+                global.currentplayer = objP4;
+                break;
+            default:
+                global.currentplayer = noone; // Default to no one if the turn number is out of range
+                break;
+        }
+        
+        // Check if the player is ready to end their turn (example: if End Turn is pressed)
+        if (global.endturn == true) {  // Use '==' to compare
             global.turnstate = "turn_end";
-			global.endturn = false;
+            global.endturn = false;  // Reset end turn flag after handling
         }
         break;
 
     case "turn_end":
-        // Handle any cleanup after the turn ends
-        // This can include things like updating scores, animations, or UI
+        // Handle any cleanup after the turn ends (e.g., update scores, animations, etc.)
         
         // Increment the turn and reset if necessary
         global.currentturn += 1;
@@ -45,7 +60,7 @@ switch (global.turnstate) {
         break;
 
     default:
-        // Catch all case to handle any unexpected state
-        global.turnstate = "turn_start";
+        // Catch-all case to handle any unexpected state
+        global.turnstate = "turn_start";  // Safe default state
         break;
 }
