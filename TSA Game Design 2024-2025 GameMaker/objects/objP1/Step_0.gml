@@ -15,33 +15,34 @@ if (global.currentturn == 1) {
             var view_h = camera_get_view_height(view_camera[0]);
 
             // Button placement and spacing for UI
-            var btn_spacing = 80;
-            var btn_x_start = view_x + 50;  // 50 pixels from the left of the viewport
-            var btn_y = view_y + view_h - 100;  // 100 pixels from the bottom of the viewport
+            var scale_x = 0.2;
+            var scale_y = 0.4146341;
+            var spritewidth = 640 * scale_x;  // Scaled width = 128 pixels
+            var padding = 20;                  // Extra spacing between buttons
+
+            var btn_spacing = spritewidth + padding;  // 128 + 20 = 148 pixels
+            var btn_x_start = view_x + 50;             // 50 pixels from the left of the viewport
+            var btn_y = view_y + view_h - 100;         // 100 pixels from the bottom of the viewport
 
             // Create a button list based on the current player's turn
             var btn_list = [];
             switch (global.currentturn) {
-                case 1: // Player 1's turn
-                    btn_list = [objAttackP2, objAttackP3, objAttackP4];
-                    break;
-                case 2: // Player 2's turn
-                    btn_list = [objAttackP1, objAttackP3, objAttackP4];
-                    break;
-                case 3: // Player 3's turn
-                    btn_list = [objAttackP1, objAttackP2, objAttackP4];
-                    break;
-                case 4: // Player 4's turn
-                    btn_list = [objAttackP1, objAttackP2, objAttackP3];
-                    break;
+                case 1: btn_list = [objAttackP2, objAttackP3, objAttackP4]; break;
+                case 2: btn_list = [objAttackP1, objAttackP3, objAttackP4]; break;
+                case 3: btn_list = [objAttackP1, objAttackP2, objAttackP4]; break;
+                case 4: btn_list = [objAttackP1, objAttackP2, objAttackP3]; break;
             }
 
             // Create buttons dynamically based on the player’s turn
-            var btn_count = array_length_1d(btn_list);  // Get number of buttons to create
+            var btn_count = array_length_1d(btn_list);
             for (var i = 0; i < btn_count; i++) {
                 var new_btn = instance_create_layer(btn_x_start + (btn_spacing * i), btn_y, "UI", btn_list[i]);
-                new_btn.persistent = true; // Keep button persistent
-                new_btn.follow_ui = true;  // Ensure the buttons follow UI movements
+                new_btn.persistent = true;
+                new_btn.follow_ui = true;
+
+                // Apply scaling
+                new_btn.image_xscale = scale_x;
+                new_btn.image_yscale = scale_y;
             }
 
             // Deduct the resources after creating the buttons

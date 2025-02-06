@@ -1,3 +1,9 @@
+//If there's only 2 players, I die
+if (global.amountofplayers = 2){
+	instance_destroy(self);
+}
+
+if (global.amountofplayers >= 3){
 // Initialize resources for Player 1
 resources = 10;  // Set starting resources
 
@@ -71,7 +77,4 @@ switch (global.p3character) {
 
 // Note: `default` case handles any unhandled character value by defaulting to Blur (could be useful for debugging)
 
-//If there's only 2 players, I die
-if (global.amountofplayers = 2){
-	instance_destroy(self);
 }

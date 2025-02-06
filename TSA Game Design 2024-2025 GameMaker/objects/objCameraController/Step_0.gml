@@ -20,8 +20,9 @@ if (target != noone) {
     var cam_y = camera_get_view_y(view_camera[0]);
 
     // Smoothly interpolate the camera position towards the target's position
-    cam_x = lerp(cam_x, target_x, 0.1); // 0.1 is the smoothness factor (adjust for faster/slower)
-    cam_y = lerp(cam_y, target_y, 0.1);
+    var transition_speed = 0.05; // Controls how fast the camera moves toward the target
+    cam_x = lerp(cam_x, target_x, transition_speed); // Interpolate X position
+    cam_y = lerp(cam_y, target_y, transition_speed); // Interpolate Y position
 
     // Set the new camera position
     camera_set_view_pos(view_camera[0], cam_x, cam_y);

@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr2P",
+    "path":"sprites/spr2P/spr2P.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,3 +1,7 @@
+//If there's not 4 players, why do I need to be here?
+if (global.amountofplayers != 4){
+	instance_destroy(self);
+}
 // Only execute this code if there are 4 players
 if (global.amountofplayers == 4){
 // Initialize resources for Player 1
@@ -72,8 +76,4 @@ switch (global.p4character) {
 }
 
 // Note: `default` case handles any unhandled character value by defaulting to Blur (could be useful for debugging)
-}
-//If there's not 4 players, why do I need to be here?
-if (global.amountofplayers != 4){
-	instance_destroy(self);
 }

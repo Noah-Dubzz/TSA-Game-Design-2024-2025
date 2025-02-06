@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprButtonPlaceholder",
-    "path":"sprites/sprButtonPlaceholder/sprButtonPlaceholder.yy",
+    "name":"sprNewButton",
+    "path":"sprites/sprNewButton/sprNewButton.yy",
   },
   "spriteMaskId":null,
   "visible":true,
