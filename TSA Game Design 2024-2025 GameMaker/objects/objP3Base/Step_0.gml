@@ -1,0 +1,1 @@
+global.p3Base = objP3Base;

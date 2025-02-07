@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_create_unit",
+  "%Name":"create_unit",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_create_unit",
+  "name":"create_unit",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

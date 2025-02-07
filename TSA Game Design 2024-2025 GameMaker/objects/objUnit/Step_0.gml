@@ -1,27 +1,59 @@
-// Check if the unit has a valid target and the target exists in the game world
-if (unit_target != undefined && instance_exists(unit_target)) {
-    // Get the target's current position
-    var target_x = unit_target.x;
-    var target_y = unit_target.y;
+if (owner != global.currentplayer){
+// Optimized Unit Movement and Damage Handling
 
-    // Calculate the direction from the unit to the target (in degrees)
-    var direction_to_target = point_direction(x, y, target_x, target_y);
+// Function to handle unit movement and damage for a given player
+function handleMovementAndDamage(targetPlayer, defenses) {
+    if (target == targetPlayer) {
+        // Ensure defenses is an array
+        if (is_array(defenses)) {
+            for (var i = 0; i < array_length(defenses); i++) {
+                var defense = defenses[i];
 
-    // Set the movement speed (adjustable for different game mechanics)
-    speed = 4;
+                // Check if the defense exists to avoid null reference errors
+                if (instance_exists(defense)) {
+                    // Move towards the current defense
+                    move_towards_point(defense.x, defense.y, 4);
 
-    // Calculate the distance between the unit and its target
-    var distance_to_target = point_distance(x, y, target_x, target_y);
+                    // Ensure the unit reaches the defense before attacking
+                    if (point_distance(x, y, defense.x, defense.y) <= 4) {
+                        // Apply damage to the defense
+                        defense.hp -= damage;
 
-    // Check if the unit is far enough from the target to move towards it
-    if (distance_to_target > 5) {
-        // Move the unit towards the target at the defined speed
-        move_towards_point(target_x, target_y, speed);
-    } else {
-        // If the unit is close to the target, stop moving
-        speed = 0; // Stop moving when close enough to target
+                        // Destroy the defense if its HP drops to zero or below
+                        if (defense.hp <= 0) {
+                            instance_destroy(defense);
+                        }
+
+                        // Stop processing further defenses until this one is destroyed
+                        break;
+                    } else {
+                        // Stop trying to attack next defenses until the current one is reached
+                        break;
+                    }
+                }
+            }
+        }
     }
-} else {
-    // If there's no valid target or the target no longer exists, stop the unit's movement
-    speed = 0;
 }
+
+// Arrays to store defenses for each player (manually reversed)
+var defensesP1 = [objP1, objP1Base, objP1UnitGenerator, objP1Defense3, objP1Defense2, objP1Defense1];
+var defensesP2 = [objP2, objP2Base, objP2UnitGenerator, objP2Defense3, objP2Defense2, objP2Defense1];
+var defensesP3 = [objP3, objP3Base, objP3UnitGenerator, objP3Defense3, objP3Defense2, objP3Defense1];
+var defensesP4 = [objP4, objP4Base, objP4UnitGenerator, objP4Defense3, objP4Defense2, objP4Defense1];
+
+// Handle movement and damage for each player
+handleMovementAndDamage(objP1, defensesP1);
+handleMovementAndDamage(objP2, defensesP2);
+handleMovementAndDamage(objP3, defensesP3);
+handleMovementAndDamage(objP4, defensesP4);
+
+}
+
+
+
+//unit_instance.owner = argument2;   // Assign the owner
+//unit_instance.type = argument3;    // Assign the type
+//unit_instance.target = argument4;  // Assign the target
+//unit_instance.hp = argument5;  // Assign the hp
+//unit_instance.damage = argument6;  // Assign the damage

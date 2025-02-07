@@ -6,6 +6,7 @@ if (global.amountofplayers = 2){
 if (global.amountofplayers >= 3){
 // Initialize resources for Player 1
 resources = 10;  // Set starting resources
+hp = 100;  // Example health value (adjust as necessary)
 
 // Set character sprites based on Player 1's selected character
 switch (global.p3character) {

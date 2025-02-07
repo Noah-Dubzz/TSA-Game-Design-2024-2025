@@ -1,0 +1,1 @@
+global.p2Base = objP2Base;

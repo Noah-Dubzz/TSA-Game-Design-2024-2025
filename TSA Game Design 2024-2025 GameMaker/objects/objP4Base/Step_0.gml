@@ -1,0 +1,1 @@
+global.p4Base = objP4Base;

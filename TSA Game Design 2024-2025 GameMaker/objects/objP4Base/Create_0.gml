@@ -1,0 +1,1 @@
+hp = 100;  // Example health value (adjust as necessary)
