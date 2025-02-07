@@ -3,13 +3,14 @@
   "%Name":"objP4UnitGenerator",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"objP4UnitGenerator",
   "overriddenProperties":[],
   "parent":{
-    "name":"group1",
-    "path":"folders/Objects/In-Game/Bases/group1.yy",
+    "name":"P4 Base",
+    "path":"folders/Objects/In-Game/Bases/P4 Base.yy",
   },
   "parentObjectId":null,
   "persistent":false,

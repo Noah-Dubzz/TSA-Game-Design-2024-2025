@@ -9,8 +9,8 @@
   "name":"objP4Base",
   "overriddenProperties":[],
   "parent":{
-    "name":"group1",
-    "path":"folders/Objects/In-Game/Bases/group1.yy",
+    "name":"P4 Base",
+    "path":"folders/Objects/In-Game/Bases/P4 Base.yy",
   },
   "parentObjectId":null,
   "persistent":false,

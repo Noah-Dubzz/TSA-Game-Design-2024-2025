@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"objP4Defense3",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"objP3Whistle",
+  "eventList":[],
   "managed":true,
-  "name":"objP4Defense3",
+  "name":"objP3Whistle",
   "overriddenProperties":[],
   "parent":{
-    "name":"P4 Base",
-    "path":"folders/Objects/In-Game/Bases/P4 Base.yy",
+    "name":"In-Game",
+    "path":"folders/Objects/In-Game.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprCharacterPlaceholder",
-    "path":"sprites/sprCharacterPlaceholder/sprCharacterPlaceholder.yy",
+    "name":"sprWhistle",
+    "path":"sprites/sprWhistle/sprWhistle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
