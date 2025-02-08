@@ -57,34 +57,8 @@ if (global.currentturn == 1 && !global.doingsomething) {
         sprite_index = sprite_indexIdle;  // Idle state
     }
 
-	// Declare a variable to keep track of the whistle instance
-if (!instance_exists(whistle_instance)) {
-    var whistle_instance = noone;
-}
-
-// Check if the right mouse button is held down
-if (mouse_check_button(mb_right)) {
-    // Create the whistle instance if it doesn't exist yet
-    if (!instance_exists(whistle_instance)) {
-        whistle_instance = instance_create_layer(mouse_x, mouse_y, "Instances", objP1Whistle);
-    }
-    
-    // Update the whistle's position to follow the mouse
-    if (instance_exists(whistle_instance)) {
-        whistle_instance.x = mouse_x;
-        whistle_instance.y = mouse_y;
-    }
-} else {
-    // Destroy the whistle instance when the right mouse button is released
-    if (instance_exists(whistle_instance)) {
-        instance_destroy(whistle_instance);
-        whistle_instance = noone;
-    }
-}
-
 } else {
     // If it's not Player 1's turn, set the sprite to idle state
     sprite_index = sprite_indexIdle;
-	
 }
 
