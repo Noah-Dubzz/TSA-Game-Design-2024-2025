@@ -1,11 +1,15 @@
 // In the UI Manager's Step Event (when the player is touching the unit generator and presses E)
 if (global.player_is_touching_unit_generator && keyboard_check_released(ord("E"))) {
-    // Create the "Select Unit Type" header (scaled properly)
-    create_button("Header", 20, 420, 300, 40, "Select Unit Type", does_nothing);  // Wider but shorter header
+    create_button("Header", 20, 420, 300, 40, "Select Unit Type", does_nothing);  
     
-    // Create an "Attacker" button next to the "Gatherer" button
-    create_button("Attacker", 20, 470, 140, 50, "Attacker", create_attacker);  // Sized and positioned appropriately
+    // Wrap create_attacker and create_gatherer inside anonymous functions to clear UI first
+    create_button("Attacker", 20, 470, 140, 50, "Attacker", function() {
+        clear_unit_selection_ui();
+        create_attacker();
+    });
     
-    // Create a "Gatherer" button next to the "Attacker" button
-    create_button("Gatherer", 160, 470, 140, 50, "Gatherer", create_gatherer);  // Positioned next to the "Attacker"
+    create_button("Gatherer", 160, 470, 140, 50, "Gatherer", function() {
+        clear_unit_selection_ui();
+        create_gatherer();
+    });
 }
