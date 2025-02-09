@@ -7,3 +7,4 @@ global.character4 = -1;           // Set Player 4's character to an unassigned s
 global.currentturn = 1;           // Set the starting turn to Player 1
 global.doingsomething = false;    // Initialize the action flag (false means not doing anything)
 global.unit_cost = 1;              // Sets the amount of resources it costs to make a unit
+global.player_is_touching_unit_generator = false;

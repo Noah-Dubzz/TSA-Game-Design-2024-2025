@@ -1,9 +1,16 @@
 /// @description Initialization of the turn-based game system
 
+// Initialize global resources for each player
+global.resources = [100, 100, 100, 100];  // Example: 100 resources for each of the 4 players
+
 // Global Variables for Turn System
 global.currentturn = 1;  // Player 1 starts the game
 global.turnstate = "turn_start";  // Initial state when the turn starts
 global.gameover = false;  // Flag to check if the game is over (optional)
+
+// In objGameManager's Create Event or before you reference it in the Step Event
+global.endturn = false;  // Initialize the endturn variable to false
+// Create the End Turn button dynamically
 
 // Turn Manager Initialization
 // These global variables control the flow of the game turns

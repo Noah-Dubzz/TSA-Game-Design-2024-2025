@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"objP2UnitGenerator",
+  "%Name":"objButton",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"objP2","path":"objects/objP2/objP2.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objP2UnitGenerator",
+  "name":"objButton",
   "overriddenProperties":[],
   "parent":{
-    "name":"P2 Base",
-    "path":"folders/Objects/In-Game/Bases/P2 Base.yy",
+    "name":"UI",
+    "path":"folders/Objects/In-Game/UI.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprPlayerNamePlaceholder",
-    "path":"sprites/sprPlayerNamePlaceholder/sprPlayerNamePlaceholder.yy",
+    "name":"sprNewButton",
+    "path":"sprites/sprNewButton/sprNewButton.yy",
   },
   "spriteMaskId":null,
   "visible":true,
