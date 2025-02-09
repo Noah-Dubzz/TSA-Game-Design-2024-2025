@@ -10,6 +10,7 @@ y = camY + button_y;
 // Now handle mouse interaction.
 // (Since the button's world position is adjusted to be fixed in the UI, 
 // mouse_x and mouse_y, which are in room coordinates, will work as expected.)
+// Step Event of objButton
 if (mouse_x > x && mouse_x < x + button_width * image_xscale &&
     mouse_y > y && mouse_y < y + button_height * image_yscale)
 {
@@ -17,9 +18,7 @@ if (mouse_x > x && mouse_x < x + button_width * image_xscale &&
     {
         if (action_script != undefined)
         {
-            script_execute(action_script);  // Execute the stored script asset.
+            script_execute(action_script);  // Execute the stored script asset
         }
     }
 }
-
-// (Optional) Additional code for visual feedback (e.g. changing image_blend) can go here.

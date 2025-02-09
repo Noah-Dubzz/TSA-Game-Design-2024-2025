@@ -1,5 +1,6 @@
 // Player 2's turn logic
 if (global.currentturn == 1 && !global.doingsomething) {
+	global.currentplayer = objP1;
 
     // Movement variables and speed setup
     var move_speed = 4;

@@ -8,3 +8,9 @@ global.currentturn = 1;           // Set the starting turn to Player 1
 global.doingsomething = false;    // Initialize the action flag (false means not doing anything)
 global.unit_cost = 1;              // Sets the amount of resources it costs to make a unit
 global.player_is_touching_unit_generator = false;
+global.currentplayer = objP1;
+// Initialize global player dead status in the Create Event of objGameManager
+global.player_dead_1 = false;
+global.player_dead_2 = false;
+global.player_dead_3 = false;
+global.player_dead_4 = false;

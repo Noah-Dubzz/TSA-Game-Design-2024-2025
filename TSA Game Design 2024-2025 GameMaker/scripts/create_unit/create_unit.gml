@@ -1,18 +1,11 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function create_unit(){
+function create_unit(x, y, owner, unit_type, target, health, damage) {
+    // Create an instance of objUnit at the specified position (x, y)
+    var unit_instance = instance_create_layer(x, y, "Units", objUnit);
 
-// Script: create_unit
-// This script will create an objUnit and set its properties
-
-// Create an instance of objUnit in the "Units" layer at the specified position (x, y)
-var unit_instance = instance_create_layer(argument0, argument1, "Units", objUnit);
-
-// Set the properties
-unit_instance.owner = argument2;   // Assign the owner
-unit_instance.type = argument3;    // Assign the type
-unit_instance.target = argument4;  // Assign the target
-unit_instance.health = argument5;  // Assign the health
-unit_instance.damage = argument6;  // Assign the damage
-
+    // Set the properties for the new unit
+    unit_instance.owner = owner;           // The owner (player) of the unit
+    unit_instance.type = unit_type;        // The type of the unit (e.g., attacker, gatherer)
+    unit_instance.target = target;         // The target unit (enemy base or defense)
+    unit_instance.health = health;         // The health of the unit
+    unit_instance.damage = damage;         // The damage the unit does
 }

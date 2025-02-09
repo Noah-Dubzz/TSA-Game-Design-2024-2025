@@ -1,4 +1,16 @@
-// objGameManager - Step Event
+// Determine the current unit generator based on the current player
+if (global.currentplayer == 1){
+    global.currentgenerator = objP1UnitGenerator;
+}
+if (global.currentplayer == 2){
+    global.currentgenerator = objP2UnitGenerator;
+}
+if (global.currentplayer == 3){
+    global.currentgenerator = objP3UnitGenerator;
+}
+if (global.currentplayer == 4){
+    global.currentgenerator = objP4UnitGenerator;
+}
 
 // Check if the game is over
 if (global.gameover) {
@@ -16,7 +28,7 @@ switch (global.turnstate) {
 
     case "turn_active":
         // Handle player actions for the active turn (moving, playing, etc.)
-        
+
         // Set the current player object based on the turn number
         switch(global.currentturn) {
             case 1:
@@ -34,6 +46,38 @@ switch (global.turnstate) {
             default:
                 global.currentplayer = noone; // Default to no player
                 break;
+        }
+
+        // Check if the current player is dead (using individual flags)
+        if (global.currentturn == 1 && global.player_dead_1) {
+            // Skip this player's turn if they are dead
+            global.currentturn += 1;  // Move to the next player
+            if (global.currentturn > global.amountofplayers) {
+                global.currentturn = 1;  // Loop back to player 1
+            }
+            global.turnstate = "turn_start";  // Transition back to turn start state
+            return;  // Exit the current step event to avoid processing the turn
+        } else if (global.currentturn == 2 && global.player_dead_2) {
+            global.currentturn += 1;
+            if (global.currentturn > global.amountofplayers) {
+                global.currentturn = 1;
+            }
+            global.turnstate = "turn_start";
+            return;
+        } else if (global.currentturn == 3 && global.player_dead_3) {
+            global.currentturn += 1;
+            if (global.currentturn > global.amountofplayers) {
+                global.currentturn = 1;
+            }
+            global.turnstate = "turn_start";
+            return;
+        } else if (global.currentturn == 4 && global.player_dead_4) {
+            global.currentturn += 1;
+            if (global.currentturn > global.amountofplayers) {
+                global.currentturn = 1;
+            }
+            global.turnstate = "turn_start";
+            return;
         }
 
         // Check if the player is ready to end their turn (using the 'end_turn' function)

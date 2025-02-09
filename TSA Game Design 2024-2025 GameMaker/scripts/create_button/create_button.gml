@@ -1,13 +1,3 @@
-/*
-Script: create_button(name, x, y, width, height, button_text, action_script)
-Parameters:
-    name         - Unique identifier for the button (e.g., "End Turn")
-    x, y         - Position of the button on the screen (UI offset)
-    width, height- Desired final dimensions of the button
-    button_text  - Text displayed on the button
-    action_script- The script asset to call when the button is clicked
-*/
-
 function create_button(name, x, y, width, height, button_text, action_script) {
     // Create the button instance on the "UI" layer using objButton
     var button = instance_create_layer(x, y, "UI", objButton);
