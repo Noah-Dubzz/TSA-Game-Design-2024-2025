@@ -1,17 +1,3 @@
-// Determine the current unit generator based on the current player
-if (global.currentplayer == 1){
-    global.currentgenerator = objP1UnitGenerator;
-}
-if (global.currentplayer == 2){
-    global.currentgenerator = objP2UnitGenerator;
-}
-if (global.currentplayer == 3){
-    global.currentgenerator = objP3UnitGenerator;
-}
-if (global.currentplayer == 4){
-    global.currentgenerator = objP4UnitGenerator;
-}
-
 // Check if the game is over
 if (global.gameover) {
     // Game over logic, no more turns

@@ -1,1 +1,0 @@
-global.player_is_touching_unit_generator = true;

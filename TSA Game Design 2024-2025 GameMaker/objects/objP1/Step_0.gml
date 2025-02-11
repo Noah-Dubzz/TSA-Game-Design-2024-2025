@@ -1,8 +1,13 @@
-// Player 2's turn logic
-if (global.currentturn == 1 && !global.doingsomething) {
+if (global.currentturn == 1) {
 	global.currentplayer = objP1;
+	global.currentgenerator = objP1UnitGenerator;
+	if (place_meeting(x, y, objP1UnitGenerator)){
+		global.colliding = true;
+	} else {
+		global.colliding = false;
+	}
 
-    // Movement variables and speed setup
+if (global.doingsomething = false){    // Movement variables and speed setup
     var move_speed = 4;
     var move_x = 0;
     var move_y = 0;
@@ -63,3 +68,4 @@ if (global.currentturn == 1 && !global.doingsomething) {
     sprite_index = sprite_indexIdle;
 }
 
+}

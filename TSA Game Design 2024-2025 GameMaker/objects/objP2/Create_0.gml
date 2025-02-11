@@ -18,16 +18,16 @@ switch (global.p2character) {
         break;
         
     case 2:
-        // Player 1 selected character 2 (Blur)
-        sprite_indexLeft = sprBlurLeft;
-        sprite_indexRight = sprBlurRight;
-        sprite_indexUp = sprBlurUp;
-        sprite_indexDown = sprBlurDown;
-        sprite_indexUpLeft = sprBlurUpLeft;
-        sprite_indexUpRight = sprBlurUpRight;
-        sprite_indexDownLeft = sprBlurDownLeft;
-        sprite_indexDownRight = sprBlurDownRight;
-        sprite_indexIdle = sprBlurIdle;
+        // Player 1 selected character 2 (Blames)
+        sprite_indexLeft = sprBlamesLeft;
+        sprite_indexRight = sprBlamesRight;
+        sprite_indexUp = sprBlamesUp;
+        sprite_indexDown = sprBlamesDown;
+        sprite_indexUpLeft = sprBlamesUpLeft;
+        sprite_indexUpRight = sprBlamesUpRight;
+        sprite_indexDownLeft = sprBlamesDownLeft;
+        sprite_indexDownRight = sprBlamesDownRight;
+        sprite_indexIdle = sprBlamesIdle;
         break;
         
     case 3:
@@ -44,16 +44,16 @@ switch (global.p2character) {
         break;
         
     case 4:
-        // Player 1 selected character 4 (Blur)
-        sprite_indexLeft = sprBlurLeft;
-        sprite_indexRight = sprBlurRight;
-        sprite_indexUp = sprBlurUp;
-        sprite_indexDown = sprBlurDown;
-        sprite_indexUpLeft = sprBlurUpLeft;
-        sprite_indexUpRight = sprBlurUpRight;
-        sprite_indexDownLeft = sprBlurDownLeft;
-        sprite_indexDownRight = sprBlurDownRight;
-        sprite_indexIdle = sprBlurIdle;
+        // Player 1 selected character 4 (Wanderer)
+        sprite_indexLeft = sprWandererLeft;
+        sprite_indexRight = sprWandererRight;
+        sprite_indexUp = sprWandererUp;
+        sprite_indexDown = sprWandererDown;
+        sprite_indexUpLeft = sprWandererUpLeft;
+        sprite_indexUpRight = sprWandererUpRight;
+        sprite_indexDownLeft = sprWandererDownLeft;
+        sprite_indexDownRight = sprWandererDownRight;
+        sprite_indexIdle = sprWandererIdle;
         break;
         
     default:
@@ -69,5 +69,4 @@ switch (global.p2character) {
         sprite_indexIdle = sprBlurIdle;
         break;
 }
-
 // Note: `default` case handles any unhandled character value by defaulting to Blur (could be useful for debugging)

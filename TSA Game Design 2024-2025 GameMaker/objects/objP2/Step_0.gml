@@ -1,8 +1,13 @@
-// Player 2's turn logic
-if (global.currentturn == 2 && !global.doingsomething) {
+if (global.currentturn == 2) {
 	global.currentplayer = objP2;
+	global.currentgenerator = objP2UnitGenerator;
+	if (place_meeting(x, y, objP2UnitGenerator)){
+		global.colliding = true;
+	} else {
+		global.colliding = false;
+	}
 
-    // Movement variables and speed setup
+if (global.doingsomething = false){    // Movement variables and speed setup
     var move_speed = 4;
     var move_x = 0;
     var move_y = 0;
@@ -62,4 +67,5 @@ if (global.currentturn == 2 && !global.doingsomething) {
 } else {
     // If it's not Player 1's turn, set the sprite to idle state
     sprite_index = sprite_indexIdle;
+}
 }
