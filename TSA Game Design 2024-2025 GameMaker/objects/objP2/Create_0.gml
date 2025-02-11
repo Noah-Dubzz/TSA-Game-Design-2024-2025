@@ -1,6 +1,6 @@
 // Initialize resources for Player 1
 resources = 10;  // Set starting resources
-hp = 100;  // Example health value (adjust as necessary)
+hp = 100;  // Example hp value (adjust as necessary)
 
 // Set character sprites based on Player 1's selected character
 switch (global.p2character) {

@@ -8,5 +8,5 @@ function attack_p2(){
     // Create a unit to attack Player 2
 	global.doingsomething = false;
 	global.currentplayer.resources = global.currentplayer.resources - global.unit_cost;
-    create_unit(global.currentgenerator.x, global.currentgenerator.y, global.currentplayer, "Attacker", 2, 100, 20);  // Position, owner (player 1), target (Player 2), etc.
+    create_unit(global.currentgenerator.x, global.currentgenerator.y, global.currentplayer, "Attacker", 2, 5, 20);  // Position, owner (player 1), target (Player 2), etc.
 }

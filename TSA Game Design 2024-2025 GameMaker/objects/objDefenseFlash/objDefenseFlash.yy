@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"objUnit",
+  "%Name":"objDefenseFlash",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objUnit",
+  "name":"objDefenseFlash",
   "overriddenProperties":[],
   "parent":{
-    "name":"Units",
-    "path":"folders/Objects/In-Game/Units.yy",
+    "name":"In-Game",
+    "path":"folders/Objects/In-Game.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprTestUnit",
+    "path":"sprites/sprTestUnit/sprTestUnit.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
