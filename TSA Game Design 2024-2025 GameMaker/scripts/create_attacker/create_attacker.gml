@@ -1,7 +1,7 @@
 function create_attacker() {
     // Starting position for the buttons
-    var start_x = 20;
-    var start_y = 520;
+    var start_x = 5;
+    var start_y = 510;
     var button_width = 120;
     var button_height = 40;
     var button_spacing = 10;
@@ -27,7 +27,7 @@ function create_attacker() {
             var attack_script = asset_get_index("attack_p" + string(i));
 
             // Create the button dynamically with the text, action, and font size
-            create_button("Attack P" + string(i), current_x, start_y, button_width, button_height, "Attack P" + string(i), attack_script);  // Adjust the font size as needed
+            create_button("P" + string(i), current_x, start_y, button_width, button_height, "P" + string(i), attack_script);  // Adjust the font size as needed
 
             // Move to the right for the next button
             current_x += button_width + button_spacing;

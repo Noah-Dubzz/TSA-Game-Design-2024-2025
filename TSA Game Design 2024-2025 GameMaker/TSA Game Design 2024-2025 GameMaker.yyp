@@ -47,7 +47,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"TSA Game Design 2024-2025 GameMaker",
   "resources":[
@@ -94,7 +94,6 @@
     {"id":{"name":"objResourceDrop","path":"objects/objResourceDrop/objResourceDrop.yy",},},
     {"id":{"name":"objResourceDropSpawner","path":"objects/objResourceDropSpawner/objResourceDropSpawner.yy",},},
     {"id":{"name":"objStartButton","path":"objects/objStartButton/objStartButton.yy",},},
-    {"id":{"name":"objStartGame","path":"objects/objStartGame/objStartGame.yy",},},
     {"id":{"name":"objTheApexPortrait","path":"objects/objTheApexPortrait/objTheApexPortrait.yy",},},
     {"id":{"name":"objTheBlurPortrait","path":"objects/objTheBlurPortrait/objTheBlurPortrait.yy",},},
     {"id":{"name":"objTheWandererPortrait","path":"objects/objTheWandererPortrait/objTheWandererPortrait.yy",},},

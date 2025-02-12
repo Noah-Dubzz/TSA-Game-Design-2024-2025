@@ -1,8 +1,5 @@
 // Draw Event of objButton
-
-// Draw the button's sprite (if you have a sprite for the button, else you can skip this)
 draw_self();
-
 // Get the camera's position
 var camX = camera_get_view_x(view_camera[0]);
 var camY = camera_get_view_y(view_camera[0]);

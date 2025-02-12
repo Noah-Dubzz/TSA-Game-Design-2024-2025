@@ -1,10 +1,10 @@
 // --------- Upgrade and Activation Logic ---------
 // Check if it's player 2's turn, if the player is near this defense, and if they pressed "E" to upgrade.
-if (global.currentplayer == objP1 && place_meeting(x, y, objP1) && keyboard_check_pressed(ord("E"))) {
+if (global.currentplayer == objP3 && place_meeting(x, y, objP3) && keyboard_check_pressed(ord("E"))) {
     // Calculate cost based on current upgrades.
     var cost = upgrade_cost * (1 + upgrades);
-    if (objP1.resources >= cost) {
-        objP1.resources -= cost;
+    if (objP3.resources >= cost) {
+        objP3.resources -= cost;
         upgrades += 1;
 		hp = 100;
         active = true;  // Activate defense once upgraded.
@@ -29,7 +29,7 @@ if (active) {
         var count = instance_number(objUnit);
         for (var i = 0; i < count; i++) {
             var unit = instance_find(objUnit, i);
-            if (unit.owner != objP1) { // Only target enemy units
+            if (unit.owner != objP3) { // Only target enemy units
                 var d = point_distance(x, y, unit.x, unit.y);
                 if (d < closest_dist) {
                     closest_dist = d;

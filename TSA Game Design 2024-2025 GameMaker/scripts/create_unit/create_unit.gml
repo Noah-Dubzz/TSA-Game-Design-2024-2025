@@ -8,4 +8,5 @@ function create_unit(x, y, owner, unit_type, target, hp, damage) {
     unit_instance.target = target;         // The target unit (enemy base or defense)
     unit_instance.hp = hp;         // The hp of the unit
     unit_instance.damage = damage;         // The damage the unit does
+	global.doingsomething = false;
 }

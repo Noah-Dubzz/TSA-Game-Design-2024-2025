@@ -11,14 +11,6 @@ y = camY + button_y;
 // (Since the button's world position is adjusted to be fixed in the UI, 
 // mouse_x and mouse_y, which are in room coordinates, will work as expected.)
 // Step Event of objButton
-if (mouse_x > x && mouse_x < x + button_width * image_xscale &&
-    mouse_y > y && mouse_y < y + button_height * image_yscale)
-{
-    if (mouse_check_button_pressed(mb_left))
-    {
-        if (action_script != undefined)
-        {
-            script_execute(action_script);  // Execute the stored script asset
-        }
-    }
-}
+// Script: clear_unit_selection_ui
+
+// Destroy all instances of objButton related to unit selection
