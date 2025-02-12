@@ -12,18 +12,18 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2f914af5-fe4e-44b0-8a63-c7e722097dbd","name":"2f914af5-fe4e-44b0-8a63-c7e722097dbd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"7c6c4f7f-3f97-4112-8dd3-d04232023590","name":"7c6c4f7f-3f97-4112-8dd3-d04232023590","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":100,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"7ef87e21-2f54-47ea-ac70-f92d486b0e17","blendMode":0,"displayName":"default","isLocked":false,"name":"7ef87e21-2f54-47ea-ac70-f92d486b0e17","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"b4b5316a-b01c-46e7-a584-e97986f20379","blendMode":0,"displayName":"default","isLocked":false,"name":"b4b5316a-b01c-46e7-a584-e97986f20379","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sprApexDownLeft",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"The Apex",
     "path":"folders/Sprites/Characters/The Apex.yy",
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2f914af5-fe4e-44b0-8a63-c7e722097dbd","path":"sprites/sprApexDownLeft/sprApexDownLeft.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"12db1076-a93e-4acc-be3b-7754f0545560","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7c6c4f7f-3f97-4112-8dd3-d04232023590","path":"sprites/sprApexDownLeft/sprApexDownLeft.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4458a52a-7e87-4635-a88b-7bf1919a991d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

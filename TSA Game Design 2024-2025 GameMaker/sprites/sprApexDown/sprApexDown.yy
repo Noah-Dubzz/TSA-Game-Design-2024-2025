@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"390b24b9-6110-4e3c-a86f-fb3712fd04cb","name":"390b24b9-6110-4e3c-a86f-fb3712fd04cb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"45a9be61-5592-49c0-bf6a-e8dd2f9e5ef0","name":"45a9be61-5592-49c0-bf6a-e8dd2f9e5ef0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":200,
   "gridY":200,
   "height":100,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"e738dae7-51c0-4214-a5cf-92f21cf33e8c","blendMode":0,"displayName":"default","isLocked":false,"name":"e738dae7-51c0-4214-a5cf-92f21cf33e8c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"79665f65-fc26-4453-adcd-c877cae335ab","blendMode":0,"displayName":"default","isLocked":false,"name":"79665f65-fc26-4453-adcd-c877cae335ab","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sprApexDown",
   "nineSlice":{
@@ -78,7 +78,7 @@
     },
     "name":"sprApexDown",
     "playback":1,
-    "playbackSpeed":30.0,
+    "playbackSpeed":10.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -88,8 +88,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"390b24b9-6110-4e3c-a86f-fb3712fd04cb","path":"sprites/sprApexDown/sprApexDown.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"70ef84a4-ddf8-4e44-9f3d-8c5affe277ae","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"45a9be61-5592-49c0-bf6a-e8dd2f9e5ef0","path":"sprites/sprApexDown/sprApexDown.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"a372552b-4b2e-4878-8334-bcf99b5f5bc8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
