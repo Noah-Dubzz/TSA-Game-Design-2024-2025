@@ -141,6 +141,7 @@
     {"id":{"name":"sprAXUnit2","path":"sprites/sprAXUnit2/sprAXUnit2.yy",},},
     {"id":{"name":"sprAXUnitDead","path":"sprites/sprAXUnitDead/sprAXUnitDead.yy",},},
     {"id":{"name":"sprBack","path":"sprites/sprBack/sprBack.yy",},},
+    {"id":{"name":"sprBackground","path":"sprites/sprBackground/sprBackground.yy",},},
     {"id":{"name":"sprBBUnit1","path":"sprites/sprBBUnit1/sprBBUnit1.yy",},},
     {"id":{"name":"sprBBUnit2","path":"sprites/sprBBUnit2/sprBBUnit2.yy",},},
     {"id":{"name":"sprBBUnitDead","path":"sprites/sprBBUnitDead/sprBBUnitDead.yy",},},
