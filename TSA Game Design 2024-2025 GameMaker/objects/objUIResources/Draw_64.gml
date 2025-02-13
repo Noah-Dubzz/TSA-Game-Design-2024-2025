@@ -46,5 +46,5 @@ if (global.player_dead_1 && global.currentplayer == objP1) {
 
 // Display the resource count
 draw_set_font(Medival);
-draw_set_color(c_white);
+draw_set_color(c_black);
 draw_text(10, 10, "Resources: " + string(resource_count));  // Display resources at position (10, 10)

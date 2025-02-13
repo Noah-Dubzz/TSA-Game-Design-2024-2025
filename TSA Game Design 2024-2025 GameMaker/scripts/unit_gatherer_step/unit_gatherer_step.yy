@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"unit_gatherer_step",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"unit_gatherer_step",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

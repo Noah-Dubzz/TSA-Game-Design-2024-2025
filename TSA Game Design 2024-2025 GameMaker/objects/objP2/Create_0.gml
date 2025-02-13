@@ -1,11 +1,12 @@
-// Initialize resources for Player 1
-resources = 10;  // Set starting resources
-hp = 100;  // Example hp value (adjust as necessary)
+/// CREATE EVENT
 
-// Set character sprites based on Player 1's selected character
+// Initialize Player 2's starting resources and hp
+resources = 10;  // Starting resource count
+hp = 100;        // Player 2's hp (adjust as needed)
+
+// Assign character sprites based on Player 2's selected character
 switch (global.p2character) {
-    case 1:
-        // Player 1 selected character 1 (Blur)
+    case 1: // Blur
         sprite_indexLeft = sprBlurLeft;
         sprite_indexRight = sprBlurRight;
         sprite_indexUp = sprBlurUp;
@@ -16,9 +17,8 @@ switch (global.p2character) {
         sprite_indexDownRight = sprBlurDownRight;
         sprite_indexIdle = sprBlurIdle;
         break;
-        
-    case 2:
-        // Player 1 selected character 2 (Blames)
+    
+    case 2: // Blames
         sprite_indexLeft = sprBlamesLeft;
         sprite_indexRight = sprBlamesRight;
         sprite_indexUp = sprBlamesUp;
@@ -29,9 +29,8 @@ switch (global.p2character) {
         sprite_indexDownRight = sprBlamesDownRight;
         sprite_indexIdle = sprBlamesIdle;
         break;
-        
-    case 3:
-        // Player 1 selected character 3 (Apex)
+    
+    case 3: // Apex
         sprite_indexLeft = sprApexLeft;
         sprite_indexRight = sprApexRight;
         sprite_indexUp = sprApexUp;
@@ -42,9 +41,8 @@ switch (global.p2character) {
         sprite_indexDownRight = sprApexDownRight;
         sprite_indexIdle = sprApexIdle;
         break;
-        
-    case 4:
-        // Player 1 selected character 4 (Wanderer)
+    
+    case 4: // Wanderer
         sprite_indexLeft = sprWandererLeft;
         sprite_indexRight = sprWandererRight;
         sprite_indexUp = sprWandererUp;
@@ -55,9 +53,9 @@ switch (global.p2character) {
         sprite_indexDownRight = sprWandererDownRight;
         sprite_indexIdle = sprWandererIdle;
         break;
-        
+    
     default:
-        // If no valid character is selected, fall back to Blur
+        // Default to Blur if no valid character is selected
         sprite_indexLeft = sprBlurLeft;
         sprite_indexRight = sprBlurRight;
         sprite_indexUp = sprBlurUp;
@@ -69,4 +67,3 @@ switch (global.p2character) {
         sprite_indexIdle = sprBlurIdle;
         break;
 }
-// Note: `default` case handles any unhandled character value by defaulting to Blur (could be useful for debugging)

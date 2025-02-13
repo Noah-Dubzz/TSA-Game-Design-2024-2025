@@ -47,7 +47,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.6.2.162",
   },
   "name":"TSA Game Design 2024-2025 GameMaker",
   "resources":[
@@ -121,6 +121,8 @@
     {"id":{"name":"create_unit","path":"scripts/create_unit/create_unit.yy",},},
     {"id":{"name":"does_nothing","path":"scripts/does_nothing/does_nothing.yy",},},
     {"id":{"name":"end_turn","path":"scripts/end_turn/end_turn.yy",},},
+    {"id":{"name":"unit_attacker_step","path":"scripts/unit_attacker_step/unit_attacker_step.yy",},},
+    {"id":{"name":"unit_gatherer_step","path":"scripts/unit_gatherer_step/unit_gatherer_step.yy",},},
     {"id":{"name":"sndError","path":"sounds/sndError/sndError.yy",},},
     {"id":{"name":"spr_StartButton","path":"sprites/spr_StartButton/spr_StartButton.yy",},},
     {"id":{"name":"spr2P","path":"sprites/spr2P/spr2P.yy",},},

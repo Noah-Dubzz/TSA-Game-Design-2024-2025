@@ -1,7 +1,7 @@
 // Check if the game is over
 if (global.gameover) {
     // Game over logic, no more turns
-    show_message("Game Over!");
+    show_debug_message("Game Over!");
     return;
 }
 
