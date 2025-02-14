@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Blames Blonde",
-    "path":"folders/Sprites/Characters/Blames Blonde.yy",
+    "path":"folders/Sprites/In-Game/Characters/Blames Blonde.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

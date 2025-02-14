@@ -1,5 +1,6 @@
 //If there's only 2 players, I die
 if (global.amountofplayers = 2){
+	hp = 0;
 	instance_destroy(self);
 }
 

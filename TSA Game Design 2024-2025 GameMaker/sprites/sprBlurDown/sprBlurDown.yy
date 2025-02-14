@@ -45,7 +45,7 @@
   "origin":4,
   "parent":{
     "name":"The Blur",
-    "path":"folders/Sprites/Characters/The Blur.yy",
+    "path":"folders/Sprites/In-Game/Characters/The Blur.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

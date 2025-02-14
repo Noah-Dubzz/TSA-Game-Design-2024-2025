@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sprMusicText",
-    "path":"sprites/sprMusicText/sprMusicText.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

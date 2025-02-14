@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"The Wanderer",
-    "path":"folders/Sprites/Units/The Wanderer.yy",
+    "path":"folders/Sprites/In-Game/Units/The Wanderer.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

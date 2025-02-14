@@ -1,5 +1,6 @@
 //If there's not 4 players, why do I need to be here?
 if (global.amountofplayers != 4){
+	hp = 0;
 	instance_destroy(self);
 }
 // Only execute this code if there are 4 players

@@ -61,8 +61,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"ChracterSelect",
-    "path":"folders/Sprites/ChracterSelect.yy",
+    "name":"CharacterSelect",
+    "path":"folders/Sprites/UI/Regular UI/CharacterSelect.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

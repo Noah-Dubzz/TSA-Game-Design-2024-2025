@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"The Apex",
-    "path":"folders/Sprites/Units/The Apex.yy",
+    "path":"folders/Sprites/In-Game/Units/The Apex.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

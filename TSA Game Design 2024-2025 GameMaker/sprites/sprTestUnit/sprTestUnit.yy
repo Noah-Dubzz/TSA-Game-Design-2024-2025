@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Units",
-    "path":"folders/Sprites/Units.yy",
+    "path":"folders/Sprites/In-Game/Units.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,5 +1,9 @@
 /// STEP EVENT
-
+if (!instance_exists(objP1) && !instance_exists(objP2) && !instance_exists(objP4)) {
+    // All three players (P1, P2, P3) are gone
+    global.winner = 3;
+	room_goto(rmWin);
+} 
 // Check if it's Player 3's turn
 if (global.currentturn == 3) {
     global.currentplayer = objP3;

@@ -7,7 +7,6 @@ function unit_attacker_step() {
         instance_find(asset_get_index("objP" + string(target) + "Defense1"), 0),
         instance_find(asset_get_index("objP" + string(target) + "Defense2"), 0),
         instance_find(asset_get_index("objP" + string(target) + "Defense3"), 0),
-        instance_find(asset_get_index("objP" + string(target) + "UnitGenerator"), 0),
         instance_find(asset_get_index("objP" + string(target) + "Base"), 0),
         instance_find(asset_get_index("objP" + string(target)), 0)
     ];
