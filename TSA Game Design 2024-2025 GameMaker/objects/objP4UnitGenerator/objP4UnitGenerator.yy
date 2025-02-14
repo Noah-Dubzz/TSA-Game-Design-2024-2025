@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprPlayerNamePlaceholder",
-    "path":"sprites/sprPlayerNamePlaceholder/sprPlayerNamePlaceholder.yy",
+    "name":"sprUnitGenerator",
+    "path":"sprites/sprUnitGenerator/sprUnitGenerator.yy",
   },
   "spriteMaskId":null,
   "visible":true,

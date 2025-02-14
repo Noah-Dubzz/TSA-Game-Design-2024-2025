@@ -39,17 +39,17 @@ if (active) {
         }
     }
 
-    // Instant-Hit Attack
-    if (instance_exists(current_target) && point_distance(x, y, current_target.x, current_target.y) <= detection_range) {
-        if (fire_timer >= current_fire_rate) {
-            // Apply damage to the target.
-            current_target.hp -= current_damage;
+// Instant-Hit Attack
+if (instance_exists(current_target) && point_distance(x, y, current_target.x, current_target.y) <= detection_range) {
+    if (fire_timer >= current_fire_rate) {
+        // Apply damage to the target.
+        current_target.hp -= current_damage;
 
-            // Create the muzzle flash effect.
-            instance_create_layer(x, y, "UI", objDefenseFlash);
+        // Create the muzzle flash effect at the top of the object.
+        instance_create_layer(x, bbox_top, "UI", objDefenseFlash);
 
-            // Reset the fire timer.
-            fire_timer = 0;
-        }
+        // Reset the fire timer.
+        fire_timer = 0;
     }
+}
 }

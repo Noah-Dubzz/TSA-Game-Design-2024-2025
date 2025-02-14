@@ -1,3 +1,10 @@
+// Check if this instance is overlapping another objResourceDrop
+while (place_meeting(x, y, objResourceDrop)) {
+    // Move in a small random direction
+    x += irandom_range(-5, 5);
+    y += irandom_range(-5, 5);
+}
+
 // Check if a player is overlapping this drop (assuming your player object is "objPlayer")
 if (place_meeting(x, y, global.currentplayer)) {
     

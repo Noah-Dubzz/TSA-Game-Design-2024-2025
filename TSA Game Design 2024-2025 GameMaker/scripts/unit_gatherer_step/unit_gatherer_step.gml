@@ -4,7 +4,6 @@ function unit_gatherer_step() {
     // Ensure speed is valid
     if (!variable_instance_exists(id, "speed") || speed <= 0) {
         speed = 2; // Default speed if not set
-        show_debug_message("Speed not set or <= 0. Defaulting speed to 2.");
     }
     
     // Step 1: Find the nearest resource if not carrying one
@@ -14,17 +13,13 @@ function unit_gatherer_step() {
         
         if (target_resource != noone) {
             var distToResource = point_distance(x, y, target_resource.x, target_resource.y);
-            show_debug_message("Distance to resource: " + string(distToResource));
             // Only move if the resource is further than a small tolerance (to avoid collision issues)
             if (distToResource > 4) {
-                show_debug_message("Moving towards resource at: " + string(target_resource.x) + ", " + string(target_resource.y));
                 move_towards_point(target_resource.x, target_resource.y, speed);
             } else {
                 // Already close—do nothing here so that attack logic can take over
-                show_debug_message("Resource within tolerance; not moving further.");
             }
         } else {
-            show_debug_message("No resource found!");
         }
     }
     
@@ -36,12 +31,10 @@ function unit_gatherer_step() {
             if (attack_timer <= 0) {
                 attack_timer = attack_speed; // Reset attack timer
                 target_resource.hp -= attack_damage;
-                show_debug_message("Attacking resource. New resource hp: " + string(target_resource.hp));
                 if (target_resource.hp <= 0) {
                     instance_destroy(target_resource);
                     carrying_resource = true;
                     target_resource = noone;
-                    show_debug_message("Resource destroyed. Now carrying resource.");
                 }
             }
         }
@@ -50,14 +43,11 @@ function unit_gatherer_step() {
     // Step 3: Return to the owner if carrying a resource
     if (carrying_resource) {
         var distToOwner = point_distance(x, y, owner.x, owner.y);
-        show_debug_message("Distance to owner: " + string(distToOwner));
         if (distToOwner > 4) {
-            show_debug_message("Moving towards owner at: " + string(owner.x) + ", " + string(owner.y));
             move_towards_point(owner.x, owner.y, speed);
         } else {
             owner.resources += 5;
             carrying_resource = false;
-            show_debug_message("Resource delivered to owner.");
         }
     }
 	        // Set the sprite based on the owner and character type
