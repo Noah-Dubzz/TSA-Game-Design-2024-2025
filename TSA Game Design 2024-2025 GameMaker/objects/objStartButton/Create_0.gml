@@ -16,3 +16,5 @@ global.player_dead_2 = false;
 global.player_dead_3 = false;
 global.player_dead_4 = false;
 global.winner = 0;
+global.underattack = false;
+global.gettingresources = false;

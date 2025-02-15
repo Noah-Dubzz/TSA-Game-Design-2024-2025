@@ -1,4 +1,30 @@
-/// STEP EVENT
+// -----------------------------------------
+// 1. Check if any of this player's units are gatherers
+var hasGatherer = false;
+with (objUnit) {
+    if (global.currentturn == 1 && owner == objP1 && type == "Gatherer") {
+        hasGatherer = true;
+        // Debugging: print out when a gatherer is found
+    }
+}
+
+// Update global.gettingresources based on whether we found a gatherer
+global.gettingresources = hasGatherer;
+
+
+// -----------------------------------------
+// 2. Check if any enemy units have this player as a target
+var underAttack = false;
+with (objUnit) {
+    if (global.currentturn == 1 && target == objP1) {
+        underAttack = true;
+        // Debugging: print out when a unit is targeting objP1
+    }
+}
+
+// Update global.underattack based on whether we found any attackers
+global.underattack = underAttack;
+
 
 if (!instance_exists(objP2) && !instance_exists(objP3) && !instance_exists(objP4)) {
     // All three players (P1, P2, P3) are gone

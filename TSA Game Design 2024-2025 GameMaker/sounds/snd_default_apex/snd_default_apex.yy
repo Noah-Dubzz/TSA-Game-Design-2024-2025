@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_default_apex",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":7.541678,
+  "name":"snd_default_apex",
+  "parent":{
+    "name":"Apex",
+    "path":"folders/Sounds/Apex.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_default_apex.wav",
+  "type":0,
+  "volume":0.99,
+}

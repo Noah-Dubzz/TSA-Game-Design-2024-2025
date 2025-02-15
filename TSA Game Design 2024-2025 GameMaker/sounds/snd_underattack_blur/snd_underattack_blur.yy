@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_underattack_blur",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":6.88542,
+  "name":"snd_underattack_blur",
+  "parent":{
+    "name":"Blur",
+    "path":"folders/Sounds/Blur.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_underattack_blur.wav",
+  "type":0,
+  "volume":1.0,
+}
