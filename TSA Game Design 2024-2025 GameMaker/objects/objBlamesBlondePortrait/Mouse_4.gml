@@ -1,5 +1,5 @@
 // Transition to the character select room for all players
-
+audio_play_sound(sndButtonPress, 1, false);
 // Player 1 selection
 if (room == rmPlayer1Select && global.amountofplayers > 1) {
     global.p1character = 2; // Assign Player 1 character

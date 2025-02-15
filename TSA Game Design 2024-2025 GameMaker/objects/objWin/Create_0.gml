@@ -1,3 +1,6 @@
+audio_stop_all();
+audio_play_sound(sndWin, 1, false);
+
 // Check if the winner is P1
 if (global.winner == 1) {
     if (global.p1character == 1) {

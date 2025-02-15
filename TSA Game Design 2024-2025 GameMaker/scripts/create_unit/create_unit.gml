@@ -1,6 +1,7 @@
 function create_unit(x, y, owner, unit_type, target, hp, damage) {
     // Create an instance of objUnit at the specified position (x, y)
     var unit_instance = instance_create_layer(x, y, "Units", objUnit);
+	audio_play_sound(sndCreateUnit, 1, false);
 
     // Set the properties for the new unit
     unit_instance.owner = owner;           // The owner (player) of the unit

@@ -1,4 +1,5 @@
 function create_attacker() {
+	audio_play_sound(sndButtonPress, 1, false);
     // Starting position for the buttons
     var start_x = 5;
     var start_y = 510;

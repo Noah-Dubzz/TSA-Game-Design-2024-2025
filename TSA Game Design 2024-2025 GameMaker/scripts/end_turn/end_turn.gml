@@ -4,6 +4,7 @@
 function end_turn() {
     // Set the global.endturn flag to true to signal that the turn should end
 	if (global.doingsomething = false){
+	audio_play_sound(sndEndTurn, 1, false);
     global.endturn = true;
 	}
     // Optionally, handle other actions (e.g., resource updates, etc.) when the turn ends

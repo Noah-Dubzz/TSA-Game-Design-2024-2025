@@ -10,6 +10,7 @@ if (place_meeting(x, y, global.currentplayer)) {
     
     // Check if the player pressed E this step
     if (keyboard_check_pressed(ord("E"))) {
+		audio_play_sound(sndMining, 1, false);
         press_count += 1;
         
         /// @NOTE: Insert your sound effect code here

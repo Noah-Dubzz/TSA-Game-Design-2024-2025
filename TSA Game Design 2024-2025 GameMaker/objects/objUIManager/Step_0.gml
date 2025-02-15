@@ -2,6 +2,7 @@
 if (!global.doingsomething) {
   if (global.colliding == true && global.currentplayer.resources >= global.unit_cost){	
    if (keyboard_check_released(ord("E"))) {
+			audio_play_sound(sndButtonPress, 1, false);
 
             global.doingsomething = true;
 

@@ -8,6 +8,7 @@ if (global.currentplayer == objP4 && place_meeting(x, y, objP4) && keyboard_chec
         upgrades += 1;
 		hp = 100;
         active = true;  // Activate defense once upgraded.
+		audio_play_sound(sndTurretActivate, 1, false);
     }
 }
 

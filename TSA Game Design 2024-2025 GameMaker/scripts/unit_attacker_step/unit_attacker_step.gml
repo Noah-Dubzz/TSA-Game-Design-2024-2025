@@ -69,8 +69,10 @@ function unit_attacker_step() {
                 if (point_distance(x, y, current_target.x, current_target.y) <= 4) {
                     if (damage_timer >= 3) {
                         current_target.hp -= damage;
+						audio_play_sound(sndDamage, 1, false);
                         damage_timer = 0;
                         if (current_target.hp <= 0) instance_destroy(current_target);
+						audio_play_sound(sndStructureDestroy, 1, false);
                     }
                 }
                 break;

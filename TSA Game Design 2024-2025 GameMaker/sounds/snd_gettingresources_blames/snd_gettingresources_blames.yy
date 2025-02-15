@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_gettingresources_blames.wav",
   "type":0,
-  "volume":1.0,
+  "volume":0.0,
 }
